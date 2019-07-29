@@ -1,27 +1,49 @@
 {
-  "name": "yoga",
-  "version": "0.1.0",
-  "private": true,
+  "name": "components",
+  "version": "0.0.1",
+  "description": "一个 vue 组件库",
+  "main": "dist/components.umd.min.js",
+  "files": [
+    "dist",
+    "packages"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --target lib --name components packages/index.js",
+    "lint": "vue-cli-service lint",
+    "release": "sh build/release.sh"
   },
   "dependencies": {
-    "vue": "^2.5.21",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "@zouxin/utils": "^1.2.0",
+    "better-scroll": "^1.15.2",
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^3.3.0",
-    "@vue/cli-service": "^3.3.0",
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-eslint": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
+    "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
+    "sass": "^1.18.0",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.21"
-  }
+    "standard-version": "^6.0.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoux/components.git"
+  },
+  "keywords": [
+    "vue",
+    "components"
+  ],
+  "author": "zoux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoux/components/issues"
+  },
+  "homepage": "https://github.com/zoux/components#readme"
 }
