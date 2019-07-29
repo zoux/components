@@ -1,5 +1,5 @@
 {
-  "name": "components",
+  "name": "@zouxin/components",
   "version": "0.0.1",
   "description": "一个 vue 组件库",
   "main": "dist/components.umd.min.js",
