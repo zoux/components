@@ -13,7 +13,8 @@ then
     standard-version --tag-prefix "" --release-as ${VERSION}
     git push origin master
 
-    # publish
+    # build & publish
+    npm run build
     npm publish --access public
 
     # docs
