@@ -1,7 +1,7 @@
 <template>
   <div ref="scroll" :class="c('scroll')">
     <div :class="c('wrapper')">
-      <div ref="content">
+      <div ref="content" :class="c('content')">
         <slot></slot>
       </div>
 
