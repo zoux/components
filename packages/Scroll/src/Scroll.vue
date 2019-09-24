@@ -157,7 +157,7 @@ export default {
       await this.$nextTick()
       await this.scroll.refresh()
     },
-    // 更新 Scroll 状态，下拉/下拉加载结束后调用
+    // 更新 Scroll 状态，下拉刷新/上拉加载结束后调用
     async update (isPullUpDone = false) {
       if (this.isUpdate) return
       this.isUpdate = true

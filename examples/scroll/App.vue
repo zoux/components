@@ -38,7 +38,7 @@ export default {
     },
     async loadMore () {
       const data = await this.fetchList(this.page + 1)
-      this.dataList = this.dataList.concat(data)
+      this.dataList.push(...data)
       if (data.length < this.pageSize) {
         this.$refs.scroll.update(true)
       } else {

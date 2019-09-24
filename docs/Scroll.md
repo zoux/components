@@ -58,7 +58,7 @@ export default {
     },
     async loadMore () {
       const data = await this.fetchList(this.page + 1)
-      this.dataList = this.dataList.concat(data)
+      this.dataList.push(...data)
       if (data.length < this.pageSize) {
         this.$refs.scroll.update(true)
       } else {
@@ -125,7 +125,7 @@ export default {
 |scrollToTop|滑动到顶部||
 |scrollToBottom|滑动到底部||
 |refresh|更新 Scroll 状态，DOM 结构发生变化后调用||
-|update|更新 Scroll 状态，下拉/下拉加载结束后调用|isPullUpDone: Boolean|
+|update|更新 Scroll 状态，下拉刷新/上拉加载结束后调用|isPullUpDone: Boolean|
 
 
 ### Slots
